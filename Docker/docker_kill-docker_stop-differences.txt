@@ -1,0 +1,10 @@
+docker kill  docker stop  differences
+
+docker stop
+Stop a running container by sending SIGTERM and then SIGKILL after a grace period
+
+docker kill
+Kill a running container using SIGKILL or a specified signal
+
+docker kill doesn't care if container agrees to shut down right now, it will shut down the container right now.
+deep down the 'docker stop' will send SIGNTERM first.

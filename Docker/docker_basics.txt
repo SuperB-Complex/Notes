@@ -1,0 +1,28 @@
+what is docker?
+Docker is a platform allowing application running independently.With the usage of docker makes it easier to have consistency between testing, developing and 
+production environment. Like libraries, server related configurations and infrastructure-related elements will be packaged.
+
+what are the compnenets of docker architecture and explain?
+It is a server-client architecture. There is docker daemon and the clients are the command line tool. Developer use CLI to call REST APIs exposed by the docker 
+daemon. The entire system is controlled by APIs. So you can use CLT to manage components of docker daemon, such as images, container, networks and data volumns. 
+The left thing is called docker registry. Docker hub is a public registry, a place to store docker images.
+
+Docker objects:
+images: are the read-only. And you can use an image to design a new docker container. Image can be pulled from docker hub and utilized. It can add extra steps to 
+the last image and design a modified docker image. Yo can also write your own docker file to create your own docker container.
+container: are created after running a docker image and you can call APIs to start a container, stop a container.
+volumes: The present data executed by the docker is utilized by docker container and saved in volumes. It is better to utilize volumes for writing, so the volume's 
+content is outside the container, so it doesn't affect the container's size and properties.
+networkd: are communication passages between isolated docker containers.
+
+Benefits of docker?
+Reducing costs on a simple setting up;
+Standardization and Productivity, because docker provides continuous development, deployment and testing to the servers in the production environment;
+Compatibility and maintainability, more portable and easy to install and debug;
+Faster configuration;
+Rapid deployment;
+
+There are articles that I referenced:
+https://www.educba.com/docker-architecture/
+https://www.educba.com/docker-interview-questions/
+https://nickjanetakis.com/blog/understanding-how-the-docker-daemon-and-docker-cli-work-together

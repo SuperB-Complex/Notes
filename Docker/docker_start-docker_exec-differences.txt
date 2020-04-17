@@ -1,0 +1,4 @@
+differences between docker start and docker exec
+
+docker start starts a container so it is running.
+docker exec to execute a command in container.

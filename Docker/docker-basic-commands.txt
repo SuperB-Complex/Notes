@@ -1,0 +1,46 @@
+docker basic commands
+
+# start a docker:
+# start a terminal to communicate with the docker daemon
+docker run ubuntu /bin/bash
+# outputs hello world, the docker container will shutdown once this command is executed
+docker run  ubuntu echo "hello world"
+or 
+docker run ubuntu:18.04 /bin/echo 'Hello world'
+
+# list docker containers
+docker ps [-a] [-l]
+# -a:all  -l:most recently
+
+# get basic information of a container
+docker inspect CONTAINERID/CONTAINERNAME
+
+# using customized name
+docker run --name=container04 -i -t ubuntu /bin/bash
+
+docker start [-i] CONTAINERNAME
+
+# remove a docker container
+docker rm CONTAINERNAME
+
+# using ctrl+Q+P will logout the docker daemon
+
+# you reenter that daemon if you logout
+docker attach CONTAINERNAME or CONTAINERID
+
+# check the process of container
+docker top CONTAINERNAME
+
+# execute commands in a docker container
+docker exec [-d] [-i] [-t] CONTAINERNAME COMMAND
+
+# stop daemon docker
+docker stop CONTAINERNAME
+docker kill CONTAINERNAME
+
+# manual files for docker
+man docker-run
+man docker-logs
+man docker-top
+man docker-exec
+
